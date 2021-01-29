@@ -22,7 +22,7 @@ public class LogService {
                 
                 for (var record : records) {
                     System.out.println("--------------------------------------------");
-                    System.out.println("LOG");
+                    System.out.println("LOG: " + record.topic());
                     System.out.println(record.key());
                     System.out.println(record.value());
                     System.out.println(record.partition());
