@@ -23,7 +23,7 @@ public class NewOrderMain {
             System.out.println("Sucesso enviando " + data.topic() + ":::partition " + data.partition() + "/ offset " + data.offset() + "/ timestamp " + data.timestamp());
         };
 
-        var email = "Welcome! We are processing your order";
+        var email = "Thank you for your order! We are processing your order";
         var emailRecord = new ProducerRecord<>("ECOMMERCE_SEND_EMAIL", email, email);
         producer.send(record, callback).get();
         producer.send(emailRecord, callback).get();
